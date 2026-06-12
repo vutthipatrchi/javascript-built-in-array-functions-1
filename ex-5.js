@@ -7,6 +7,9 @@ const students = [
 
 function getAverageStudentScore(students) {
   // Start coding here
+  const totalScores = students.reduce((total,student) => total+student.score,0);
+  const averageScores = totalScores/students.length
+return averageScores;
 }
 
-getAverageStudentScore(students); // Output: 87.5
+console.log(getAverageStudentScore(students)); // Output: 87.5
